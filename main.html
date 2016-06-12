@@ -1,0 +1,11 @@
+<body>
+{{> messages}}
+</body>
+
+<template name="messages">
+    {{#each messagesList}}
+        {{message}}<br>
+    {{/each}}
+
+    <input type="button" value="Add message"  id="add-message"/>
+</template>
