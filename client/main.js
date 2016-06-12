@@ -15,7 +15,9 @@ Template.messages.events({
     "click #add-message" (e) {
         var mes = prompt("Please enter message", "");
         Messages.insert({
-            message: mes, time: Date.now()
+            message: mes, time: Date.now(),
+            user_id: Meteor.userId(),
+            username: Meteor.user().emails[0].address
         });
     }
 });

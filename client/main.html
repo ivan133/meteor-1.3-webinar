@@ -3,9 +3,13 @@
 </body>
 
 <template name="messages">
-    {{#each messagesList}}
-        {{message}}<br>
-    {{/each}}
+    {{> loginButtons}} <br>
+
+    <ul>
+        {{#each messagesList}}
+            <li>{{message}} <small>{{#if username}} {{username}} {{else}} anonym {{/if}}</small></li>
+        {{/each}}
+    </ul>
 
     <input type="button" value="Add message"  id="add-message"/>
 </template>
