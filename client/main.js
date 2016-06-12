@@ -1,7 +1,8 @@
 import {Template} from 'meteor/templating';
-import './main.html';
 
-var Messages = new Meteor.Collection("messages");
+import {Messages} from '../imports/api/messages'
+
+import './main.html';
 
 Template.messages.helpers(
     {
